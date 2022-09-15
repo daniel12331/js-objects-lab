@@ -1,10 +1,16 @@
 const aCar = {
     owner : "Joe Bloggs",
+    address : '3 Walker Lane',
     car:{
         make: "Toyota",
         model:"Corolla",
         cc:"1800"
     },
+    previous_owners:[
+        {name : 'Pat Smith', address : 'Main Street'},
+        {name: 'Shelly Dwyer', address: 'High Street'}
+    ],
+
     interior:{},
 
     registration : '201WD1058'
@@ -15,6 +21,5 @@ const aCar = {
   aCar.interior.texture = 'Leather';
   aCar.interior.shade = 'Black ';
 
-  console.log(aCar.owner + ' drives a ' + aCar.car.make + ' that has a ' + aCar.exterior 
-  + ' exterior colour and has a ' + aCar.interior.shade +
-  aCar.interior.texture + ' interior and has ' + aCar.mileage + ' Miles ');
+  console.log('First Owner : ' + aCar.previous_owners[0].name + ' - '
+  + aCar.previous_owners[0].address);
