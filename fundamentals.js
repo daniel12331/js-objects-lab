@@ -8,12 +8,13 @@ const aCar = {
     },
     previous_owners:[
         {name : 'Pat Smith', address : 'Main Street'},
-        {name: 'Shelly Dwyer', address: 'High Street'}
+        {name: 'Shelly Dwyer', address: 'High Street'},
+        {name: 'John Murphy', address: 'Low Street'}
     ],
-
     interior:{},
+    registration : '201WD1058',
 
-    registration : '201WD1058'
+    features : ['Parking Assist','Alarm','Tow-Bar'],
   };
   aCar.mileage = '10000';
   
@@ -21,5 +22,9 @@ const aCar = {
   aCar.interior.texture = 'Leather';
   aCar.interior.shade = 'Black ';
 
-  console.log('First Owner : ' + aCar.previous_owners[0].name + ' - '
-  + aCar.previous_owners[0].address);
+  for (let i = 0 ; i < aCar.previous_owners.length ; i += 1) {
+    console.log(aCar.previous_owners[i].name) ;
+};
+for (let p in aCar.car)  {
+    console.log(p.toUpperCase() + ' = ' + aCar.car[p] ) ;
+};
